@@ -1,17 +1,17 @@
 import mongoose from "mongoose";
 import config from '../config/config.js'
-export let CartsFactory
+export let Carts
 export let Products
 export let Users
 export let Tickets
 switch (config.persistence) {
     case "MONGO":
-        const connection = mongoose.connect(config.mongo_url).then(()=>{console.log("connected db")})
+        const connection = mongoose.connect(config.mongo_url)
         const { default: CartsMongo } = await import('./mongo/carts.mongo.js')
         const { default: ProductsMongo } = await import('./mongo/products.mongo.js')
         const { default: UsersMongo } = await import('./mongo/users.mongo.js')
         const { default: TicketsMongo } = await import('./mongo/tickets.mongo.js')
-        CartsFactory = CartsMongo
+        Carts = CartsMongo
         Products = ProductsMongo
         Users = UsersMongo
         Tickets = TicketsMongo
@@ -21,7 +21,7 @@ switch (config.persistence) {
         const { default: ProductsMemory } = await import("./memory/products.memory.js")
         const { default: UsersMemory } = await import("./memory/users.memory.js")
         const { default: TicketsMemory } = await import("./memory/tickets.memory.js")
-        CartsFactory = CartsMemory
+        Carts = CartsMemory
         Products = ProductsMemory
         Users = UsersMemory
         Tickets = TicketsMemory

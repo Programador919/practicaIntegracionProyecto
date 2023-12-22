@@ -96,6 +96,5 @@ export default class Carts {
         let result = await cartsModel.create(cart)
         return result
         console.log("Carro creado correctamente")
-        console.log(result)
     }
 }

@@ -1,29 +1,25 @@
 body{
-    background-color: 	#75cdcd;
+    background-color: 	#B5B2B2;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
 }
 .infoProd{
     border: 2px solid white;
-    width: 80%;
-    margin-top: 20px;
+    width: 48%;
 }
 .formulario{
-    width: 70%;
+    border: 2px solid white;
+    width: 48%;
     padding: 10px 50px 50px 50px;
-    
 }
 .formulario input, select{
-    width: 40%;
+    width: 50%;
     margin-top: 20px;
-    
 }
 .inputs{
     display: flex;
-    flex-direction: column;
 }
 .botones{
     margin-top: 50px;
@@ -61,7 +57,7 @@ input[type="email"],
 input[type="password"],
 textarea {
     padding: 10px;
-    border: 1px solid #181414;
+    border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
     width: 100%;
