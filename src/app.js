@@ -133,7 +133,7 @@ socketServer.on("connection", socket => {
 
     socket.on("newEmail", async({email, comment}) => {
         let result = await transport.sendMail({
-            from:'Chat Correo <bast.s.rojas@gmail.com>',
+            from:'Chat Correo <luisalbertovalencia1966>',
             to:email,
             subject:'Correo con Socket y Nodemailer',
             html:`
@@ -302,7 +302,7 @@ app.post('/forgot-password', async (req, res) => {
         res.sendFile('index.html', { root: app.get('views') });
     }
   });
-//-----------------------------------Cambiar Contraseña--------------------------------//
+//---------------------------------Cambiar Contraseña----------------------//
 //-----------------------------------Mocking--------------------------------//
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -311,7 +311,7 @@ app.get("/mockingproducts", async(req,res)=>{
 
     const products = [];
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 70; i++) {
         const product = {
             id: nanoid(),
             description: `Product ${i + 1}`,
